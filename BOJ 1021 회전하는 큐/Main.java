@@ -4,7 +4,11 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 	
 	public class Main { 
-		
+		/*
+		 * LinkedList를 이용한 원형큐
+		 * 
+		 * 
+		 */
 		public static void main(String[] args) throws IOException { 
 			
 			BufferedReader bf = new BufferedReader(new InputStreamReader(System.in)); 
@@ -23,17 +27,17 @@ import java.util.LinkedList;
 		private LinkedList<Integer> list = new LinkedList<Integer>();
 		private int count = 0;
 		private String[] seq; 
-		CircleQueue(int size, String[] seq) {
+		CircleQueue(int size, String[] seq) { // 큐에 삽입
 	for (int i = 1; i <= size; i++) {
 		list.add(i);
 		}
-	this.seq = seq;
+	this.seq = seq; // seq 에 삽입
 	start();
 	} 
 		
 		private void start() { 
 			int length = seq.length; 
-			for (int i = 0; i < length; i++) {
+			for (int i = 0; i < length; i++) { //뽑아야할 개수만큼 반복
 				int n = Integer.parseInt(seq[i]);
 				operate(n); 
 				}
