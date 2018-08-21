@@ -82,6 +82,7 @@ public class Main {
 		 		int tmp=0;
 		 		for(int i=0; i<r; i++) {
 		 			for(int j=0; j<c; j++) {
+		 				if(map[i][j] ==wall)continue;
 		 				tmp = dist1[i][j] + dist2[i][j] + dist3[i][j];
 		 				if(map[i][j] == door)tmp=-2;
 		 				
