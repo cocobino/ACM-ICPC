@@ -24,45 +24,46 @@ class Main {
 
     public static void main(String[] args) throws IOException {
     	int n = Integer.parseInt(br.readLine());
-    	int bus = Integer.parseInt(br.readLine());
+    	int m = Integer.parseInt(br.readLine());
     	
+    	map = new int[n+1][n+1];
     	
-    	dist = new int[101][101];
-    	
-    	for(int i=1; i<=n; i++) {
-    		for(int j=1; j<=n; j++) {
-    			if(i!=j)dist[i][j]=Integer.MAX_VALUE;
-    		}
-    	}
-    	
-    	for(int i=1; i<=bus; i++) {
+    	for(int i=0; i<m; i++) {
     		st = new StringTokenizer(br.readLine());
-    	int a = Integer.parseInt(st.nextToken());
-    	int b = Integer.parseInt(st.nextToken());
-    	int c = Integer.parseInt(st.nextToken());
-    	if(c <dist[a][b])dist[a][b]=c;
+    		int from = Integer.parseInt(st.nextToken());
+    		int to = Integer.parseInt(st.nextToken());
+    		int cost = Integer.parseInt(st.nextToken());
     		
-    	}//insert
-    	//floyd
-    	for(int i=1; i<=n; i++) {
-    		for(int j=1; j<=n; j++) {
-    			for(int k=1; k<=n; k++) {
-    				dist[j][k] = Math.min(dist[j][k], dist[j][i]+dist[i][k]);
-    			}
+    		if(map[from][to] ==0) {
+    			map[from][to]=cost;
+    		}else {
+    			map[from][to] = Math.min(cost, map[from][to]);
     		}
-    	}
+    	}//inser
+    	
+    	for(int mid = 1; mid <= n; mid++){ 
+    		for(int start = 1; start <=n; start++){
+    			if(map[start][mid] == 0)	// 연결이 안되면 처리 안함
+    				continue;
+    			for(int end = 1; end <= n; end++){ 
+    				if(map[mid][end] == 0 || start == end) continue; 
+    				// 중간 경로를 거쳐 가는 것이 그냥 가는것보다 빠르면 수정
+    				if(map[start][end] == 0 || map[start][end] > map[start][mid] + map[mid][end]) {
+    					map[start][end] = map[start][mid] + map[mid][end]; 
+    					}
+    				} 
+    			} 
+    		}
+    			
+    		
     	
     	for(int i=1; i<=n; i++) {
     		for(int j=1; j<=n; j++) {
-    			if(dist[i][j]<Integer.MAX_VALUE)bw.write(String.valueOf(dist[i][j]));
-    			else bw.write(String.valueOf("0"));
-    			
-    			if(j<n)bw.write(String.valueOf(" "));	
+    			bw.write(String.valueOf(map[i][j]+" "));
     		}
     		bw.write(String.valueOf("\n"));
     	}
     	bw.flush();
-    	
 	}// main
 
  
