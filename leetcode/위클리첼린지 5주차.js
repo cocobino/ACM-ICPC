@@ -26,4 +26,19 @@ function solution(word) {
     return rst;
 }
 
+function solution(word) {
+    const arr = [781, 156, 31, 6, 1];
+
+    let rst =0;
+
+    for(let i=0; i<word.length; i++) {
+        rst += 'AEIOU'.indexOf(word[i]) * arr[i] +1;
+    }
+
+    return rst;
+}
+
+console.log(solution('AA'));
+
+
 console.log(solution('I'));
