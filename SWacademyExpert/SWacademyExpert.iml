@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/1206 View" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1208 Flatten" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1209 Sum" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1210 Ladder1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1213 String" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1215 회문1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1216 회문2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1217 거듭 제곱" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1218 괄호 짝짓기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1219 길찾기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1222 계산기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1225 암호 생성기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1231 중위순회" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1232 사칙연산" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1493 수의 새로운 연산" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1824 혁진이의 프로그램 검증" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1861 정사각형 방" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1865 동철이의 일 분배" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1926 간단한 369 게임" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1949 등산로 조성" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1984 중간 평균값 구하기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1986 지그재그 숫자" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1989 초심자의 회문 검사" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/2001 파리 퇴치" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/2005 파스칼의 삼각형" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/2105 디저트 카페" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/2805 농작물 수확하기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/2814 최장 경로" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/2817 부분 수열의 합" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/2819 격자판의 숫자 이어 붙이기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/3456 직사각형 길이 찾기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/3459 승자 예측하기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/3752 가능한 시험 점수" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/3975 승률 비교하기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4008 숫자 만들기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4012 요리사" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4014 활주로 건설" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4047 영준이의 카드 카운팅" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4050 재관이의 대량 할인" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4115 벌꿀채취" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4299 태혁이의 사랑은 타이밍" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4406 모음이 보이지 않는 사람" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4466 최대 성적표 만들기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4522 세상의 모든 팰린드롬" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4579 세상의 모든 팰린드롬 2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4615 재미있는 오셀로 게임" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4698 테네스의 특별한 소수" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4740 밍이의 블록게임" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4751 다솔이의 다이아몬드 장식" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4789 성공적인 공연 기획" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4797 의석이의 우뚝 선 산" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/5162 두가지 빵의 딜레마" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/5215 햄버거 다이어트" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/5356 의석이의 세로로 말해요" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/5431 민석이의 과제 체크하기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/5432 쇠막대 자르기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/5521 상원이의 생일파티" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
