@@ -3,41 +3,57 @@ const RECOVERY = 2;
 
 
 function solution(board, skillList) {
-
-    const calc = (r1, c1, r2, c2, callback) => {
-        for (let i = r1; i <= r2; i++) {
-            for (let j = c1; j <= c2; j++) {
-                callback(i, j)
-            }
-        }
-
-    }
+    const dp = new Array(board.length + 1).fill().map(_ => new Array(board[0].length + 1).fill(0))
 
     skillList.forEach((skill) => {
-        const [Type, r1, c1, r2, c2, degree] = skill
+        const [type, r1, c1, r2, c2, degree] = skill
 
-        //공격
-        if (Type === ATTACK) {
-            calc(r1, c1, r2, c2, (r, c) => {
-                board[r][c] -= degree
-            })
+        if (type === ATTACK) {
+            dp[r1][c1] -= degree
+            dp[r2 + 1][c2 + 1] -= degree
+            dp[r1][c2 + 1] += degree
+            dp[r2 + 1][c1] += degree
         }
 
-        //회복
-        if (Type == RECOVERY) {
-            calc(r1, c1, r2, c2, (r, c) => {
-                board[r][c] += degree
-            })
+        if (type === RECOVERY) {
+            dp[r1][c1] += degree
+            dp[r2 + 1][c2 + 1] += degree
+            dp[r1][c2 + 1] -= degree
+            dp[r2 + 1][c1] -= degree
         }
     })
 
-    let ans = 0;
-    calc(0, 0, board.length-1, board[0].length-1, (r, c) => {
-        board[r][c] > 0 && ans++
-    })
+    //열간 누적합
+    for (let i = 0; i < dp[0].length; i++) {
+        for (let j = 0; j < dp.length - 1; j++) {
+            dp[j + 1][i] += dp[j][i]
+        }
+    }
+
+    //행간 누적합
+    for (let i = 0; i < dp.length; i++) {
+        for (let j = 0; j < dp[0].length - 1; j++) {
+            dp[i][j + 1] += dp[i][j]
+        }
+    }
+
+    //계산
+    for (let i = 0; i < board.length; i++) {
+        for (let j = 0; j < board[0].length; j++) {
+            board[i][j] += dp[i][j]
+        }
+    }
 
 
+    let ans = 0
+    for (let i = 0; i < board.length; i++) {
+        for (let j = 0; j < board[0].length; j++) {
+            if(board[i][j] > 0) {
+                ans += 1
+            }
+        }
+    }
     return ans
 }
 
-solution([[5, 5, 5, 5, 5], [5, 5, 5, 5, 5], [5, 5, 5, 5, 5], [5, 5, 5, 5, 5]], [[1, 0, 0, 3, 4, 4], [1, 2, 0, 2, 3, 2], [2, 1, 0, 3, 1, 2], [1, 0, 1, 3, 3, 1]])
+solution([[1, 2, 3], [4, 5, 6], [7, 8, 9]], [[1, 1, 1, 2, 2, 4], [1, 0, 0, 1, 1, 2], [2, 2, 0, 2, 0, 100]])
